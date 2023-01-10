@@ -123,7 +123,6 @@ Hints:
 § To calculate average of 3 values, add them all together and divide by 3
 § To check if number A is at least double number B, check for A >= 2 * B.
 Apply this to the team's average scores �
-*/
 
 const calcAverage = (a, b, c) => (a + b + c) /3;
 console.log(calcAverage(3,4,5));
@@ -150,3 +149,41 @@ scoreDolphins = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);
+*/
+
+const friend1 = 'Jordan';
+const friend2 = 'Dakota';
+const friend3 = 'Birdy';
+
+const friends = ['Jordan', 'Dakota', 'Birdy'];
+console.log(friends); 
+
+const y = new Array(1992, 1993, 2018, 2019);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'Jenny';
+console.log(friends);
+
+const firstName = 'Jordan';
+const jordan = [firstName, 'Balcourt', 2023 - 1995, 'Trader', friends];
+console.log(jordan);
+console.log(jordan,length);
+
+// Exercise
+const calcAge = function (birthYear) {
+    return 2023 - birthYear;
+}
+const years = [1992, 1993, 1995, 2018, 2019];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+console.log(ages);
