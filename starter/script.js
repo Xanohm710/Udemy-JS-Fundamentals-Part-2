@@ -263,7 +263,6 @@ const jared = {
     job: 'developer', 
     friends: ['Jordan', 'Dakota', 'Birdy']
 };
-*/
 
 const jared = {
     firstName: 'Jared', 
@@ -299,3 +298,46 @@ console.log(jared);
 // "Jared has 3 friends, and his best friend is called Balcourt"
 
 console.log(`${jared.firstName} has ${jared.friends.length} friends, and his best friend is ${jared.friends[0]}`);
+*/
+
+// Objects Method
+
+const jared = {
+    firstName: 'Jared', 
+    lastName: 'Young',
+    birthYear: 1992, 
+    job: 'developer', 
+    friends: ['Jordan', 'Dakota', 'Birdy'],
+    hasDriversLicense: true, 
+
+   // calcAge: function(birthYear) {
+   // return 2023 - birthYear;
+   // }
+
+   //calcAge: function () {
+   //console.log(this);
+   // return 2023 - this.birthYear;
+   //}
+
+   calcAge: function () {
+    this.age = 2023 - this.birthYear;
+    return this.age;
+   },
+   
+   getSummary: function() {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+   }
+};
+
+console.log(jared.calcAge());  // 31 (Dot Method)
+
+console.log(jared.age); 
+console.log(jared.age);  
+console.log(jared.age);  
+
+// console.log(jared['calcAge'](1992));  //31 (Bracket Method)
+
+// Challenge
+// "Jared is a 46-year old teacher, and has a driver's license"
+
+console.log(jared.getSummary());
