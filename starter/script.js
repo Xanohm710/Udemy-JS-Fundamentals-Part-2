@@ -387,7 +387,6 @@ if(mark.bmi > john.bmi) {
 } else if(john.bmi > mark.bmi) {
     console.log(`${john.fullName}'s BMI ${john.bmi} is higher than ${mark.fullName}'s BMI ${mark.bmi}!`)
 }
-*/
 
 // Iteration: The for Loop
 
@@ -406,4 +405,61 @@ if(mark.bmi > john.bmi) {
 // rep = rep + 1 is the same as rep++
 for(let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repetition ${rep}`);
+}
+*/
+
+//Looping Arrays, Breaking and continuing
+
+const jared = [
+    'Jared', 
+    'Young', 
+    2023 - 1992, 
+    'developer', 
+    ['Jordan', 'Dakota', 'Birdy'],
+    true
+];
+const types = [];
+
+// console.log(jared[0])
+// console.log(jared[1])
+// ...
+// console.log(jared[4])
+// jonas[5] does NOT exist
+
+
+for(let i = 0; i < jared.length; i++) {
+    // Reading from jonas array
+    console.log(jared[i], typeof jared[i]);
+
+    // Filling types array
+    // types[i] = typeof jared[i];
+    types.push(typeof jared[i]);
+}
+
+console.log(types);
+
+const years = [1992, 1993, 2018, 2019];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2023 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+
+// Ex: continue
+console.log('--- ONLY STRINGS ---')
+for(let i = 0; i < jared.length; i++) {
+    if(typeof jared[i] !== 'string') continue;
+
+    console.log(jared[i], typeof jared[i]);
+}
+
+// Ex: break
+console.log('--- BREAK WITH NUMBER ---')
+for(let i = 0; i < jared.length; i++) {
+    if(typeof jared[i] === 'number') break;
+
+    console.log(jared[i], typeof jared[i]);
 }
