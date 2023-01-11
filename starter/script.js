@@ -247,7 +247,6 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips, totals);
-*/
 
 const jaredArray = [
     'Jared', 
@@ -264,3 +263,39 @@ const jared = {
     job: 'developer', 
     friends: ['Jordan', 'Dakota', 'Birdy']
 };
+*/
+
+const jared = {
+    firstName: 'Jared', 
+    lastName: 'Young',
+    age: 2023 - 1992, 
+    job: 'developer', 
+    friends: ['Jordan', 'Dakota', 'Birdy']
+};
+console.log(jared);
+
+console.log(jared.lastName);
+console.log(jared['lastName']);
+
+const nameKey = 'Name';
+console.log(jared['first' + nameKey]); 
+console.log(jared['last' + nameKey]); 
+
+// console.log(jared.'last' + namekey) (Uncaught SyntaxError: Unexpected string)
+
+const interestedIn = prompt('What do you want to know about Jared? Choose between firstName, lastName, age, job, and friends');
+
+if(jared[interestedIn]) {
+    console.log(jared[interestedIn]);
+} else {
+    console.log('Wrong request!Choose between firstName, lastName, age, job, and friends');
+}
+
+jared.location = 'United States';
+jared['twitter'] = '@Xanohm710';
+console.log(jared);
+
+// Challenge
+// "Jared has 3 friends, and his best friend is called Balcourt"
+
+console.log(`${jared.firstName} has ${jared.friends.length} friends, and his best friend is ${jared.friends[0]}`);
